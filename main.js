@@ -1,5 +1,5 @@
 
-var SHEEP_2048;
+var Vik_2048;
 (function() {
   'use strict';
   if (SHEEP_2048) {
@@ -39,13 +39,13 @@ var SHEEP_2048;
     function leave() {wrapper.style.opacity="0";frame.blur();}
     wrapper.addEventListener("mouseenter",enter,false);
     wrapper.addEventListener("mouseleave",leave,false);
-    SHEEP_2048=()=>{
+    Vik_2048=()=>{
       wrapper.removeEventListener("mouseenter",enter,false);
       wrapper.removeEventListener("mouseleave",leave,false);
       wrapper.parentNode.removeChild(wrapper);
       frame=null;
       wrapper=null;
-      SHEEP_2048=undefined;
+      Vik_2048=undefined;
       for (var script of document.querySelectorAll('script[src="https://spookytryhards.github.io/2048-windowed/"]')) script.parentNode.removeChild(script);
     };
   }
